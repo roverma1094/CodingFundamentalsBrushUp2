@@ -17,13 +17,13 @@ public class FootBall {
 		if(scanner.hasNext()) {
 			inputPattern=scanner.nextLine();
 		}
-		validateInput(inputPattern);
+//		validateInput(inputPattern);
 		if(approach1(inputPattern))
 			System.out.println("YES");
 		else
 			System.out.println("NO");
 		}catch (Exception e) {
-			System.err.println(e.getMessage());
+//			System.err.println(e.getMessage());
 		}
 	}
 	/**
@@ -33,10 +33,13 @@ public class FootBall {
 	 * @param inputPattern
 	 */
 	private void validateInput(String inputPattern) {
-		if(inputPattern.isEmpty()&&inputPattern.matches("[0-1]")) {
-			throw new RuntimeException("Invalid Input");
+		if(inputPattern.isEmpty()) {
+			throw new RuntimeException("Input Pattern cannot be blank");
 		}
-		
+//		if(!inputPattern.matches("[0-1]")){
+//			throw new RuntimeException("Invalid Input");
+//		}
+//		
 		if(inputPattern.length()>patternLength) {
 			throw new RuntimeException("Input Pattern length should not be greater then 100");
 		}
